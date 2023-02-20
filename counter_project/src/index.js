@@ -5,8 +5,8 @@ import Card from "./Card";
 function App(){
     return(
         <>
-        <h1>Hello</h1>
-        <Card name='ashish'/>
+        <h1 className="center">Counter Project</h1>
+        <Card />
         </>
     )
 }
