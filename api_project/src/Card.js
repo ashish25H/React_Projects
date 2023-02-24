@@ -1,20 +1,20 @@
-import React,{useState} from "react";
+import React from "react";
 import './card.css';
 
-const Card = ({ fetchData }) => {
+const Card = ({ fetchData , index}) => {
 
    
 
   return (
     <>
       <div className="card">
-        <img src={fetchData.data?.articles[0]?.urlToImage} className='img'/>
+        <img src={fetchData.data?.articles[index]?.urlToImage} className='img'/>
 
         <div className="content">
-        <p>{fetchData.data?.articles[0]?.title}</p>
-        <p>{fetchData.data?.articles[0]?.description}</p>
-        <p className="authorName">{fetchData.data?.articles[0]?.author}</p>
-        <a className="link" href={fetchData.data?.articles[0]?.url}>Article Link</a>
+        <p>{fetchData.data?.articles[index]?.title}</p>
+        <p>{fetchData.data?.articles[index]?.description}</p>
+        <p className="authorName">{fetchData.data?.articles[index]?.author}</p>
+        <a className="link" href={fetchData.data?.articles[index]?.url}>Article Link</a>
         </div>
       </div>
     </>

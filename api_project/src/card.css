@@ -24,6 +24,7 @@ body{
 }
 .content{
     padding: 10px;
+    overflow-wrap: break-word;
 }
 .content p{
     margin-bottom: 10px;
@@ -34,4 +35,29 @@ body{
 
 .link{
     color: #1B98F5;
+}
+
+.gridDisplay{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+@media only screen and (min-width:375px) and (max-width:750px){
+    .gridDisplay{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+        justify-items: center;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .gridDisplay{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+        justify-items: center;
+    }
 }
